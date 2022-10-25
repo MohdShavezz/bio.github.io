@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;box-sizing: border-box;}
+        main{padding: 6rem 0 ; background-color: azure;}
+        .grid{display: grid;grid-template-columns: 1fr 1fr;}
+        .photo{display: flex;justify-content: center;align-items: center;}
+        .photo img{max-width: 55%;box-shadow: -20px -20px 0 0 #03a9f478;border: 1px solid black;  }
+        .bio{display: flex;justify-content: center;flex-direction: column;max-width: 500px;gap: 10px;padding: 30px;}
+        button{height: 30px;width: 125px;background-image: linear-gradient(to bottom right, #03a9f4,#f6fffd);
+            margin: 15px;border: none !important;border-radius: 20px;}
+        button:hover{background-image: linear-gradient(to bottom right,#ffffff, #03a9f4e8);cursor: pointer;}
+        
+        .bio-data{position: relative;}
+        .hg::after{content: "";top:110%;left:11px   ;width: 134px;height: 3px;background: #8080804d;position: absolute;}
+        .hg::before{content: "";top: 98%;left: 0;width: 12px;height: 12px;background: #03a9f4;position: absolute;border-radius: 50px;}
+        @media screen and (max-width:600px) {
+            .grid{display: block;}
+            .photo img{height: 250px;}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container grid">
+            <div class="photo">
+                <img src="p.jpg" height="400" alt="">
+            </div>
+            <div class="bio">
+                <div class="bio-data">
+                    <h1 class="hg">
+                        My Bio data
+                    </h1>
+                </div>
+                <p><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam ea alias laborum non nam aliquid suscipit laboriosam id quos expedita quisquam necessitatibus at sapiente fugiat asperiores eveniet corporis, perferendis nostrum?
+                </p>
+                <div class="box">
+                    <div class="bio-stats">
+                        <h3>HTML</h3>
+                        <div class="bio-progress-bar">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>CSS</h3>
+                        <div class="bio-progress-bar bio-progress-bar-2">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>JS</h3>
+                        <div class="bio-progress-bar bio-progress-bar-3">
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>PHP</h3>
+                        <div class="bio-progress-bar bio-progress-bar-4">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+                <button>DownloadCv</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
